@@ -226,10 +226,9 @@ function update(time = 0) {
 
 }
 
-document.addEventListener('click', event => {
+function handleClick(event) {
     var className = event.target.className
     className = className.split(" ")
-    console.log(className)
     switch (className[0]) {
         case 'right':
             playerMove(1)
@@ -247,6 +246,13 @@ document.addEventListener('click', event => {
             playerRotate(1)
             break;
     }
+}
+
+document.addEventListener('click', event => {
+    handleClick(event)
+})
+document.addEventListener('touchstart', event => {
+    handleClick(event)
 })
 
 document.addEventListener('keydown', event => {
