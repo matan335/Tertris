@@ -26,7 +26,12 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+.controls-arrow {
+    margin-bottom: 56px;
+}
 .right-left-arrow {
     width: 82px;
     justify-content: space-between;
 }
+
+@media(max-width: )
