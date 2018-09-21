@@ -69,7 +69,7 @@ function arenaSweep() {
         const row = arena.splice(y, 1)[0].fill(0)
         arena.unshift(row)
         ++y
-        console.log(rowCount,'rows')
+        console.log(rowCount, 'rows')
         player.score += rowCount * 10
         rowCount *= 2
 
@@ -226,16 +226,37 @@ function update(time = 0) {
 
 }
 
+document.addEventListener('click', event => {
+    var className = event.target.className
+    className = className.split(" ")
+    console.log(className)
+    switch (className[0]) {
+        case 'right':
+            playerMove(1)
+            break;
+        case 'left':
+            playerMove(-1)
+            break;
+        case 'down':
+            playerDrop();
+            break;
+        case 'R-right':
+            playerRotate(-1)
+            break;
+        case 'R-left':
+            playerRotate(1)
+            break;
+    }
+})
+
 document.addEventListener('keydown', event => {
     switch (event.keyCode) {
         case 37:
             playerMove(-1)
             break;
-
         case 39:
             playerMove(1)
             break;
-
         case 40:
             playerDrop();
             break;

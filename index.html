@@ -6,10 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
     <div>Score: <span class="score"></span></div>
-    <canvas class="tetris" width="240" height="400"></canvas>
+    <div class="container flex">
+        <canvas class="tetris" width="240" height="400"></canvas>
+        <div class="controls flex">
+            <div class="controls-arrow">
+                <div class="right-left-arrow flex">
+                    <div><i class="left fas fa-chevron-left"></i></div>
+                    <div><i class="right fas fa-chevron-right"></i></div>
+                </div>
+                <div><i class="down fas fa-chevron-down"></i></div>
+            </div>
+            <div><i class="R-left fas fa-share"></i></div>
+            <div><i class="R-right fas fa-reply"></i></div>
+        </div>
+    </div>
+
     <script src="js/tetris.js" type="module"></script>
 </body>
 </html>
