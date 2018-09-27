@@ -229,6 +229,7 @@ function update(time = 0) {
 function handleClick(event) {
     var className = event.target.className
     className = className.split(" ")
+    console.log('class:', className[0])
     switch (className[0]) {
         case 'right':
             playerMove(1)
@@ -251,6 +252,7 @@ function handleClick(event) {
 document.addEventListener('click', event => {
     handleClick(event)
 })
+
 document.addEventListener('touchstart', event => {
     handleClick(event)
 })
